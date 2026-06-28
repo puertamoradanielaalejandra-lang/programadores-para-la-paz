@@ -1,0 +1,7 @@
+ls
+mkdis semana2
+ls
+cd semana2
+touch preguntas-semana2.txt
+touch comandos.terminal.txt
+touch reflexion.semana2.txt
