@@ -1,0 +1,10 @@
+CONCEPTOS CLAVE: RUTAS Y APIS EN APLICACIONES COMUNITARIAS
+1. ¿Qué hace la ruta (route) analizada?
+El código define el siguiente endpoint:
+app.get('/mensaje/:nombre', (req, res) => { ... });
+Esta es una ruta dinámica que utiliza el método HTTP GET. Su función principal es escuchar peticiones en una dirección específica que incluye un parámetro variable llamado ":nombre" (capturado a través de req.params.nombre). Al recibir la solicitud, el servidor procesa el parámetro y responde dinámicamente con un saludo personalizado (por ejemplo, si se accede a /mensaje/Merlys, el servidor devolverá "Hola Merlys").
+2. ¿Para qué podría servir esta ruta en una aplicación comunitaria
+En el contexto de una plataforma de gestión comunitaria o de servicios ciudadanos, este tipo de rutas dinámicas es fundamental para personalizar y segmentar la información de manera eficiente:
+- Consultas de perfiles ciudadanos: Puede adaptarse para cargar la información específica de un habitante o líder comunal de forma segura (ej. /vecino/:id_afiliado).
+- Reportes e incidencias localizadas: Permite segmentar alertas o reportes de infraestructura, servicios públicos o seguridad según el sector, calle o manzana afectada (ej. /reportes/zona/:barrio o /alertas/categoria/:tipo_servicio).
+- Estado de trámites y solicitudes: Ayuda a los miembros de la comunidad a consultar en tiempo real el avance de una petición formal o derecho de petición ingresando su código único de radicado (ej. /peticiones/:codigo_radicado).
